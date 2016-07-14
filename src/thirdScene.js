@@ -3,8 +3,8 @@ var ThirdLayer = cc.Layer.extend({
         this._super();
         var size = cc.director.getWinSize()
 
-        var label = cc.LabelTTF.create("Game Over!!", "Arial", 40);
-        label.setPosition(size.width / 2, size.height *3 / 5);
+        var label = cc.LabelTTF.create("Game Over!!", "Arial", 26);
+        label.setPosition(size.width / 2, size.height *5 / 6);
         this.addChild(label, 1);
         return true;
     }
@@ -12,8 +12,6 @@ var ThirdLayer = cc.Layer.extend({
   var ThirdScene = cc.Scene.extend({
       onEnter: function() {
           this._super();
-          var backgroundLayer = new cc.LayerColor(new cc.Color(200, 90, 200, 250));
-       this.addChild(backgroundLayer);
           var layer3 = new ThirdLayer();
                  this.addChild(layer3);
 
