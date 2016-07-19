@@ -1,13 +1,16 @@
-for (var i = 0; i < 5; i++) {
-   for (var j = 0; j < 5; j++) {
-
-       var sprite = new cc.Sprite(res.cover_png);
-       sprite.attr({
-           x: size.height *0.1 + 50 * j,
-           y: size.height *0.2 + 65 * i,
-           scale: 1.0,
-           rotation: 0
-       });
-       this.addChild(sprite, 0);
-     }
-  }
+for (i = 0; i < 4; i++) {
+  for(n = 0; n < 4; n++){
+    var sprite = new cc.Sprite(res.cover_png);
+    cc.log(i);
+    cc.log(this.dropArray[i]);
+    sprite.attr({
+        x: size.width  *0.3 + 50 * n ,
+        y: size.height  * 0.3 + 50 * i,
+        scale: 1.0,
+        rotation: 0
+    });
+    //this.dropSpriteArray.push(this.sprite);
+    // this.addChild(this.sprite);
+    this.addChild(sprite, 0);
+}
+}
